@@ -110,6 +110,12 @@ arguments = [
         "help_text": "experimentally use vision for supported languages (HTML)",
         "type": bool,
     },
+    {
+        "name": "prompt",
+        "nickname": "p",
+        "help_text": "provide an initial prompt for the language model",
+        "type": str,
+    }
 ]
 
 
@@ -302,4 +308,5 @@ Once the server is running, you can begin your conversation below.
 
     validate_llm_settings(interpreter)
 
-    interpreter.chat()
+    prompt = args.prompt
+    interpreter.chat(message=prompt)
