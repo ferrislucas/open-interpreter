@@ -239,6 +239,9 @@ def terminal_interface(interpreter, message):
                 # Don't loop
                 break
 
+            # end instead of looping
+            break
+
         except KeyboardInterrupt:
             # Exit gracefully
             if active_block:
