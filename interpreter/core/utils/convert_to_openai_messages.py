@@ -43,12 +43,12 @@ def convert_to_openai_messages(messages, function_calling=True):
                 )
             else:
                 if message["output"] == "No output":
-                    content = "The code above was executed on my machine. It produced no output. Was that expected?"
+                    content = "The code above was executed on my machine. It produced no output. The command was successful."
                 else:
                     content = (
                         "Code output: "
                         + message["output"]
-                        + "\n\nWhat does this output mean / what's next (if anything, or are we done)?"
+                        + "\n\nIf the task is complete, you can move on to the next step."
                     )
 
                 new_messages.append(

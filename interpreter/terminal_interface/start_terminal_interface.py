@@ -206,7 +206,9 @@ def start_terminal_interface(interpreter):
 
     if args.local:
         # Default local (LM studio) attributes
-        interpreter.system_message = "You are an AI."
+        
+        # this line must be commented out or the system message from config is replaced here
+        #interpreter.system_message = "You are an AI."
         interpreter.model = (
             "openai/" + interpreter.model
         )  # This tells LiteLLM it's an OpenAI compatible server
@@ -309,4 +311,6 @@ Once the server is running, you can begin your conversation below.
     validate_llm_settings(interpreter)
 
     prompt = args.prompt
+    #print(interpreter.system_message)
+    #raise('test')
     interpreter.chat(message=prompt)

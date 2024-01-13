@@ -394,3 +394,8 @@ Open Interpreter is licensed under the MIT License. You are permitted to use, co
 > — _OpenAI's Code Interpreter Release_
 
 <br>
+
+
+rm /Users/ferrislucas/Library/Application\ Support/Open\ Interpreter/config.yaml && poetry run interpreter --model huggingface/openchat/openchat-3.5-1210 --api_base https://fgk80h92g8d614u2.us-east-1.aws.endpoints.huggingface.cloud --api_key $HUGGINGFACE_API_KEY --max_tokens 4000 --context_window 8192 --prompt="$(cat test.txt)"
+
+rm /Users/ferrislucas/Library/Application\ Support/Open\ Interpreter/config.yaml && poetry run interpreter --model huggingface/codellama/CodeLlama-34b-Instruct-hf --api_base https://dkjqw259yyxgvft8.us-east-1.aws.endpoints.huggingface.cloud --api_key $HUGGINGFACE_API_KEY --max_tokens 4000 --context_window 16000 --prompt="$(cat test.txt)" 
