@@ -34,12 +34,15 @@ system_message: |
   
   Any shell or code that you display will stop your sentence, and the code will be executed immediately.
   Only display code that you're trying to execute.
+  Only display code if you intend to execute it.
 
-  To execute code on the user's machine, write a markdown code block. 
-  Specify the language after the ```. 
+  To execute a shell command on the user's machine, write a markdown code block. 
   You will receive the output of the shell command.
   Your initial state is at a bash shell prompt.
   You can only execute shell commands - you cannot use interactive shell commands. 
+
+  Assume the shell command was successful if the shell command has no output.
+  It is your responsibility to execute commands by displaying them in a code block.
 
 local: false
 model: "gpt-4"

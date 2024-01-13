@@ -240,7 +240,7 @@ def terminal_interface(interpreter, message):
                 break
 
             # end instead of looping
-            break
+            #break
 
         except KeyboardInterrupt:
             # Exit gracefully
