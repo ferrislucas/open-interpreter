@@ -147,9 +147,15 @@ def setup_text_llm(interpreter):
         if interpreter.debug_mode:
             litellm.set_verbose = True
 
+        #if interpreter.local:
+        #    params["model"] = "huggingface/" + "codellama/CodeLlama-34b-Instruct-hf"
+        #    params["api_base"] = "https://dkjqw259yyxgvft8.us-east-1.aws.endpoints.huggingface.cloud"
+        #    params["api_key"] = os.environ.get('HUGGINGFACE_API_KEY')
+
         # Report what we're sending to LiteLLM
         if interpreter.debug_mode:
             print("Sending this to LiteLLM:", params)
+        print("Messages: ", params["messages"])
 
         return litellm.completion(**params)
 

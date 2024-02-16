@@ -22,6 +22,7 @@ def generate_system_message(interpreter):
     #### Add dynamic components, like the user's OS, username, relevant procedures, etc
 
     system_message += "\n" + get_user_info_string()
+    return system_message
 
     if not interpreter.local and not interpreter.disable_procedures:
         try:
